@@ -1,0 +1,31 @@
+"_ [HTB] Archetype - Overview/10.10.10.27":
+  - ". Phase #1: Enumeration":
+    - ". 135/tcp":
+    - ". 139/tcp":
+    - ". 1433/tcp":
+      - ".. Phase #2: Exploitation":
+        - ".. interactive sql shell: mssqlclient.py":
+    - ". 5985/tcp":
+    - ". 47001/tcp":
+    - ". 49664/tcp":
+    - ". 49665/tcp":
+    - ". 49666/tcp":
+    - ". 49667/tcp":
+    - ". 49668/tcp":
+    - ". 445/tcp":
+      - ". Windows Server 2019 Standard 17763 microsoft-ds":
+        - ". open smb share: backups":
+          - ". SSIS config file: prod.dtsConfig":
+            - ". SQL user credentials: sql_svc/M3g4c0rp123":
+              - ".. Phase #2: Exploitation":
+                - ".. interactive sql shell: mssqlclient.py":
+                  - ".. IS_SRVROLEMEMBER('sysadmin')":
+                    - ".. db sysadmin access":
+                      - ".. xp_cmdshell":
+                        - ".. powershell reverse shell":
+                          - ".. user.txt":
+                          - "... Phase #3: Privilege Escalation":
+                            - "... powershell history file: ConsoleHost_history.txt":
+                              - "... leaked administrative credentials":
+                                - "... interactive elevated shell: psexec.py":
+                                  - "... root.txt":

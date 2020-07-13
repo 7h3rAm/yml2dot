@@ -1,0 +1,34 @@
+"_ [VulnHub] BSides Vancouver: 2018 (Workshop)/192.168.92.169":
+  - ". Phase #1: Enumeration":
+    - ". 21/tcp":
+      - ". vsftpd 2.3.5":
+        - ". ftp://192.168.92.169/public/users.txt.bk":
+          - ". password bruteforce using hydra for user anne 🠒 princess":
+
+    - ". 22/tcp":
+      - ". OpenSSH 5.9p1 Debian 5ubuntu1.10 (Ubuntu Linux; protocol 2.0)":
+        - ". password bruteforce using hydra for user anne 🠒 princess":
+
+          - ".. Phase #2: Exploitation":
+            - ".. ssh interactive shell 🠒 anne":
+
+              - ".. Phase #3: Privilege Escalation":
+                - "... anne is part of sudo group: sudo -l":
+                  - "... sudo su 🠒 root":
+                    - "... /root/flag.txt":
+
+    - ". 80/tcp":
+      - ". Apache httpd 2.2.22 ((Ubuntu))":
+        - ". http://192.168.92.169/robots.txt":
+          - ". http://192.168.92.169/backup_wordpress":
+
+            - ".. Phase #2: Exploitation":
+              - ".. wpscan found 2 users: admin and john":
+                - ".. wpscan found password for user john 🠒 enigma":
+                  - ".. Hello Dolly plugin 🠒 PHP reverse shell 🠒 www-data":
+
+                    - ".. Phase #3: Privilege Escalation":
+                      - "... mysql credentials in /var/www/backup_wordpress/wp-config.php"
+                      - "... cronjob /usr/local/bin/cleanup":
+                        - "... netcat shell 🠒 root":
+                          - "... /root/flag.txt":
