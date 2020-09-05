@@ -2,7 +2,7 @@
 
 [![License: CC BY 4.0](https://raw.githubusercontent.com/7h3rAm/7h3rAm.github.io/master/static/files/ccby4.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This tool parses a nested YAML file into a dotgraph and renders it to a PNG image. It can be used for visualizing any nested YAML content, like `todo` lists, `config` files, etc. I use it as part of a CTF/Pentest writeups automation framework, [svachal]().
+This tool parses a nested YAML file into a dotgraph and renders it to a PNG image. It can be used for visualizing any nested YAML content, like `todo` lists, `config` files, etc. I use it as part of a CTF/Pentest writeups automation framework, [svachal](https://github.com/7h3rAm/svachal).
 
 Usage:
 ```console
